@@ -30,9 +30,6 @@ public class CubePhisics : MonoBehaviour
     }
     void Update()
     {
-        
-       
-
         //Debug.Log("L: " + l.ToString());
         //Debug.Log("X: " + transform.position.x.ToString());
         //Debug.Log("SPEED_X: " + speed.x.ToString());
@@ -58,7 +55,7 @@ public class CubePhisics : MonoBehaviour
         speed.y += acceleration.y * Time.deltaTime;
         speed.z += acceleration.z * Time.deltaTime;
 
-        transform.position = transform.position + new Vector3((speed.x + previousSpeed.x) / 2, (speed.y + previousSpeed.y) / 2, (speed.z + previousSpeed.z) / 2) * Time.deltaTime;
+        transform.position = transform.position + new Vector3((speed.x+previousSpeed.x)/2 , (speed.y+previousSpeed.y)/2, (speed.z+previousSpeed.z)/2) * Time.deltaTime;
 
     }
 }
