@@ -10,7 +10,7 @@ public class CubePhisics : MonoBehaviour
     public Transform EndPoint;
     private Transform transform;
     public Vector3 speed;
-    private Vector3 acceleration;
+    public Vector3 acceleration;
     private Vector3 previousSpeed;
     private float Kff = 0;
     private float l= 0;

@@ -5,17 +5,18 @@ using UnityEngine.UI;
 
 public class TextScript : MonoBehaviour
 {
-    private int presses = 0;
     public Text UIText;
-    // public Vector3 ac;
+    public CubePhisics a;
+    private float axyz = 0;
     void Start()
     {
         
     }
     void Update()
     {
-
-        UIText.text = "Acselleration.x : " + presses;
-        presses++;
+        axyz = Mathf.Sqrt((a.acceleration.x * a.acceleration.x)
+            + (a.acceleration.y) * (a.acceleration.y)
+            + (a.acceleration.z) * (a.acceleration.z));
+        UIText.text = "Acceleration : " + Mathf.Round(axyz)+" m/s";
     }
 }
